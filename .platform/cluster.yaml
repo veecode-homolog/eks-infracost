@@ -7,7 +7,7 @@ metadata:
   annotations:
     github.com/project-slug: veecode-homolog/eks-infracost
     backstage.io/techdocs-ref: dir:..
-    github.com/workflows: terraform-deploy.yml,terraform-destroy.yml,deploy_dashboard.yml,infracost.yml
+    github.com/workflows: terraform-deploy.yml,terraform-destroy.yml,infracost.yml
     veecode/cluster-name: eks-infracost
     infracost/project: eks-infracost
     cluster/instructions: |
