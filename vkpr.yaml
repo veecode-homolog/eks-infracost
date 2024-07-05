@@ -1,0 +1,14 @@
+global:
+  domain: vkpr.platform.vee.codes 
+  ingressClassName: nginx
+  secure: true
+  provider: aws
+cert-manager:
+  email:  
+  issuer:
+    type: ""
+    solver: "DNS01"
+external-dns:
+  enabled: true
+nginx:
+  enabled: true

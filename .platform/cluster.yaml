@@ -1,0 +1,20 @@
+apiVersion: veecode.backstage.io/v1alpha1
+kind: Cluster
+metadata:
+  name: "eks-infracost"
+  environment:
+    domain: 'vkpr.platform.vee.codes'
+  annotations:
+    github.com/project-slug: veecode-homolog/eks-infracost
+    backstage.io/techdocs-ref: dir:..
+    github.com/workflows: terraform-deploy.yml,terraform-destroy.yml,deploy_dashboard.yml,infracost.yml
+    veecode/cluster-name: eks-infracost
+    infracost/project: eks-infracost
+    cluster/instructions: |
+      aws eks update-kubeconfig --region ${region_code} --name ${my_cluster}
+spec:
+  type: eks
+  lifecycle: experimental
+  owner: "group:default/admin"
+  dependsOn: ["environment:default/platform_homolog_environment"]
+  
