@@ -7,7 +7,7 @@ jobs:
   init:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2 
       - uses: hashicorp/setup-terraform@v2
       - uses: actions/cache@v3
         with:
